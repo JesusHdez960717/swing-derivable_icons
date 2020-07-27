@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.jhw.personalization'
+
+//mainClassName = 'com.jhw.personalization.Main'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+
+dependencies {
+    testCompile 'junit:junit:4.13'
+    
+    //batick para svg
+    compile group: 'org.apache.xmlgraphics', name: 'batik-transcoder', version: '1.13'
+    compile group: 'org.apache.xmlgraphics', name: 'batik-svg-dom', version: '1.9'
+}
