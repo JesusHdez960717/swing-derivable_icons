@@ -38,15 +38,17 @@ public class IconTTF extends DerivableIcon {
         super(icon);
     }
 
-    private IconTTF(ImageIcon icon, char c, Color color, float size) {
+    private IconTTF(ImageIcon icon, Font font, char c, Color color, float size) {
         super(icon.getImage());
         this.ch = c;
         this.color = color;
         this.size = size;
+        this.font = font;
     }
 
-    public IconTTF(char c) {
+    public IconTTF(Font font, char c) {
         this.ch = c;
+        this.font = font;
 
         loadInitialImage();
     }
@@ -62,6 +64,7 @@ public class IconTTF extends DerivableIcon {
         this.ch = c;
         this.color = color;
         this.size = size;
+        this.font = font;
 
         loadInitialImage();
     }
