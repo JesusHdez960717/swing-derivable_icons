@@ -57,6 +57,7 @@ public class IconTTF extends DerivableIcon {
         this.ch = c;
         this.color = color;
         this.size = size;
+        this.font = font;
 
         loadInitialImage();
     }
