@@ -24,6 +24,8 @@ public class IconTTF extends DerivableIcon {
 
     private float size = 24f;
 
+    private Font font;
+
     public IconTTF(ImageIcon icon) {
         super(icon.getImage());
     }
@@ -49,12 +51,23 @@ public class IconTTF extends DerivableIcon {
         loadInitialImage();
     }
 
+    public IconTTF(Font font, char c) {
+        this.ch = c;
+        this.font = font;
+
+        loadInitialImage();
+    }
+
     public IconTTF(char c, Color color, float size) {
         this.ch = c;
         this.color = color;
         this.size = size;
 
         loadInitialImage();
+    }
+
+    public Font getFont() {
+        return font;
     }
 
     public char getCh() {
@@ -72,7 +85,7 @@ public class IconTTF extends DerivableIcon {
     }
 
     private void loadInitialImage() {
-        ImageIcon extractedIcon = extractIcon(MaterialIconsFont.ICON_FONT, ch, color, size);
+        ImageIcon extractedIcon = extractIcon(font, String.valueOf(ch), color, size);
         super.setImage(extractedIcon.getImage());
     }
 
@@ -87,7 +100,7 @@ public class IconTTF extends DerivableIcon {
     }
 
     private IconTTF buildIcon(char ch, Color color, float size) {
-        ImageIcon extractedIcon = extractIcon(MaterialIconsFont.ICON_FONT, ch, color, size);
+        ImageIcon extractedIcon = extractIcon(font, String.valueOf(ch), color, size);
         return new IconTTF(extractedIcon, ch, color, size);
     }
 
@@ -96,14 +109,12 @@ public class IconTTF extends DerivableIcon {
      * personalizacion.
      *
      * @param font TTF de donde se van a sacar los iconos.
-     * @param ch char que se representa el icono.
+     * @param str
      * @param color color del que se va a mostrar el icono.
      * @param size tamanno del icono.
      * @return ImageIcon extraido con las propiedades especificas.
      */
-    public static ImageIcon extractIcon(Font font, char ch, Color color, float size) {
-        String str = "" + ch;
-
+    public static ImageIcon extractIcon(Font font, String str, Color color, float size) {
         //First, we have to calculate the string's width and height
         BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_4BYTE_ABGR);
 
@@ -114,7 +125,7 @@ public class IconTTF extends DerivableIcon {
 
         //Set the font to be used when drawing the string
         //set up the size and force to use the plain style
-        font = font.deriveFont(size).deriveFont(Font.PLAIN);
+        font = font.deriveFont(size);
         g2.setFont(font);
 
         //Get the string visual bounds
