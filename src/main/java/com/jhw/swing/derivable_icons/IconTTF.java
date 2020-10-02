@@ -1,4 +1,4 @@
-package com.jhw.swing.utils.icons;
+package com.jhw.swing.derivable_icons;
 
 import java.awt.Color;
 import java.awt.Font;
