@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jhw.swing.derivable_icons;
+package com.root101.swing.derivable_icons;
 
 import java.awt.Color;
 import java.awt.Font;
