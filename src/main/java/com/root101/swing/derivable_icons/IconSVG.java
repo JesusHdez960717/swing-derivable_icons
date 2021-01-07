@@ -1,4 +1,20 @@
-package com.jhw.swing.derivable_icons;
+/*
+ * Copyright 2021 Root101 (jhernandezb96@gmail.com, +53-5-426-8660).
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Or read it directly from LICENCE.txt file at the root of this project.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.root101.swing.derivable_icons;
 
 import java.awt.Color;
 import java.awt.Image;
@@ -22,10 +38,12 @@ import org.apache.batik.anim.dom.SVGDOMImplementation;
 
 /**
  *
- * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
+ * @author Root101 (jhernandezb96@gmail.com, +53-5-426-8660)
+ * @author JesusHdezWaterloo@Github
  */
 public class IconSVG extends DerivableIcon {
 
+    //Por defecto se coge el icono de BrokenImage
     public static final byte[] BROKEN_IMAGE_DATA = new byte[]{60, 115, 118, 103, 32, 120, 109, 108, 110, 115, 61, 34, 104, 116, 116, 112, 58, 47, 47, 119, 119, 119, 46, 119, 51, 46, 111, 114, 103, 47, 50, 48, 48, 48, 47, 115, 118, 103, 34, 32, 119, 105, 100, 116, 104, 61, 34, 50, 52, 34, 32, 104, 101, 105, 103, 104, 116, 61, 34, 50, 52, 34, 32, 118, 105, 101, 119, 66, 111, 120, 61, 34, 48, 32, 48, 32, 50, 52, 32, 50, 52, 34, 62, 10, 32, 32, 32, 32, 60, 112, 97, 116, 104, 32, 102, 105, 108, 108, 61, 34, 110, 111, 110, 101, 34, 32, 100, 61, 34, 77, 48, 32, 48, 104, 50, 52, 118, 50, 52, 72, 48, 122, 109, 48, 32, 48, 104, 50, 52, 118, 50, 52, 72, 48, 122, 109, 50, 49, 32, 49, 57, 99, 48, 32, 49, 46, 49, 45, 46, 57, 32, 50, 45, 50, 32, 50, 72, 53, 99, 45, 49, 46, 49, 32, 48, 45, 50, 45, 46, 57, 45, 50, 45, 50, 86, 53, 99, 48, 45, 49, 46, 49, 46, 57, 45, 50, 32, 50, 45, 50, 104, 49, 52, 99, 49, 46, 49, 32, 48, 32, 50, 32, 46, 57, 32, 50, 32, 50, 34, 47, 62, 10, 32, 32, 32, 32, 60, 112, 97, 116, 104, 32, 102, 105, 108, 108, 61, 34, 110, 111, 110, 101, 34, 32, 100, 61, 34, 77, 48, 32, 48, 104, 50, 52, 118, 50, 52, 72, 48, 122, 34, 47, 62, 10, 32, 32, 32, 32, 60, 112, 97, 116, 104, 32, 100, 61, 34, 77, 50, 49, 32, 53, 118, 54, 46, 53, 57, 108, 45, 51, 45, 51, 46, 48, 49, 45, 52, 32, 52, 46, 48, 49, 45, 52, 45, 52, 45, 52, 32, 52, 45, 51, 45, 51, 46, 48, 49, 86, 53, 99, 48, 45, 49, 46, 49, 46, 57, 45, 50, 32, 50, 45, 50, 104, 49, 52, 99, 49, 46, 49, 32, 48, 32, 50, 32, 46, 57, 32, 50, 32, 50, 122, 109, 45, 51, 32, 54, 46, 52, 50, 108, 51, 32, 51, 46, 48, 49, 86, 49, 57, 99, 48, 32, 49, 46, 49, 45, 46, 57, 32, 50, 45, 50, 32, 50, 72, 53, 99, 45, 49, 46, 49, 32, 48, 45, 50, 45, 46, 57, 45, 50, 45, 50, 118, 45, 54, 46, 53, 56, 108, 51, 32, 50, 46, 57, 57, 32, 52, 45, 52, 32, 52, 32, 52, 32, 52, 45, 51, 46, 57, 57, 122, 34, 47, 62, 10, 60, 47, 115, 118, 103, 62, 10};
 
     /**
