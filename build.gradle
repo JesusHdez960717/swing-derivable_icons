@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.root101.swing'
 
-version = '2.0.0.RELEASE.20210107'
+version = '3.0.0.RELEASE.20210627'
 
 repositories {
     jcenter()
@@ -13,9 +13,7 @@ repositories {
 
 
 dependencies {
-    testCompile 'junit:junit:4.13'
-    
     //batick para svg
-    compile group: 'org.apache.xmlgraphics', name: 'batik-transcoder', version: '1.13'
-    compile group: 'org.apache.xmlgraphics', name: 'batik-svg-dom', version: '1.9'
+    implementation 'org.apache.xmlgraphics:batik-transcoder:1.13'
+    implementation 'org.apache.xmlgraphics:batik-svg-dom:1.9'
 }
